@@ -1,13 +1,19 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Главная страница</router-link>
     </nav>
     <router-view />
   </div>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
+
+@Component
+export default class App extends Vue {}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -19,6 +25,17 @@
 
 nav {
   padding: 30px;
+}
+
+ul {
+  margin: auto;
+  width: 300px;
+}
+
+li {
+  display: flex;
+  gap: 1em;
+  float: right;
 }
 
 nav a {
